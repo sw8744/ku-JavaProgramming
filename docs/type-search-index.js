@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"week01.lsw","l":"Errors"},{"p":"week01","l":"Example1"},{"p":"<Unnamed>","l":"Main"},{"p":"week01.greenjoa.bluejoa","l":"TestMain"},{"p":"week01.greenjoa2","l":"TestMain"},{"p":"week01.lsw","l":"TestMain"}];updateSearchResults();

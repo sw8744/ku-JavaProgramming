@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"week01"},{"l":"week01.greenjoa.bluejoa"},{"l":"week01.greenjoa2"},{"l":"week01.lsw"}];updateSearchResults();
