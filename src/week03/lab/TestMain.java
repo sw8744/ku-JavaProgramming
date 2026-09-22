@@ -85,9 +85,72 @@ public class TestMain {
         });
     }
 
+    static final int LOTTO_LENGTH = 6;
+    static final int LOTTO_MAX = 45;
+
+    static int[] generateLotto() {
+        int[] lotto = new int[LOTTO_LENGTH];
+        Random r = new Random();
+
+        for(int i = 0; i < LOTTO_LENGTH; i++) {
+            while(true) {
+                int lottoNumber = r.nextInt(LOTTO_MAX) + 1;
+                if (!hasConflict(lotto, lottoNumber, i)) {
+                    lotto[i] = lottoNumber;
+                    break;
+                }
+            }
+        }
+
+        return lotto;
+    }
+
+    static boolean hasConflict(int[] arr, int n, int idx) {
+        for(int i = 0; i < idx; i++) {
+            if (arr[i] == n) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static int[] selectionSort(int[] arr) {
+        for(int i = 0; i < arr.length - 1; i++) {
+            int minIndex = i;
+            for(int j = i; j < arr.length; j++) {
+                if(arr[minIndex] > arr[j]) {
+                    minIndex = j;
+                }
+            }
+
+            if(minIndex != i) {
+                int temp = arr[minIndex];
+                arr[minIndex] = arr[i];
+                arr[i] = temp;
+            }
+        }
+
+        return arr;
+    }
+
+    static void printLotto(int[] arr) {
+        System.out.print("로또 번호 : ");
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    static void week03Lotto() {
+        int[] lotto = generateLotto();
+        int[] sortedLotto = selectionSort(lotto.clone());
+        printLotto(sortedLotto);
+    }
+
     static void main() {
         System.out.println("202611014 이승원");
 //        week03Lab();
-        week03RSP();
+//        week03RSP();
+        week03Lotto();
     }
 }
