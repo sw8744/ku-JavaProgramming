@@ -56,9 +56,10 @@ public class TestMain {
     }
 
     static void main() {
+        System.out.println("202611014 이승원");
 //        example01();
 //        example02();
-        example03();
+//        example03();
 //        TV tv = new TV(true, 10);
 //        tv.powerOnOff();
 //        tv.channelUp();
@@ -69,5 +70,12 @@ public class TestMain {
 //        tv.channelUp();
 //        tv.channelDown();
 //        tv.channelDown();
+        BankManager manager = new BankManager("건국은행", 5);
+        manager.createAccount();
+        manager.createAccount();
+        manager.deposit();
+        manager.withdraw();
+        manager.transfer();
+        System.out.println(manager);
     }
 }

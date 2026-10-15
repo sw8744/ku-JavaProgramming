@@ -18,11 +18,11 @@ public class BankAccount2 {
         this.customerName = customerName;
         this.accountBalance = accountBalance;
 
-        System.out.println("생성자 : " + this);
+//        System.out.println("생성자 : " + this);
     }
 
     public void deposit(double amount) {
-        this.accountBalance+= amount;
+        this.accountBalance += amount;
     }
 
     public void withdraw(double amount) {
@@ -50,5 +50,14 @@ public class BankAccount2 {
         System.out.println("계좌번호 : " + this.accountNumber);
         System.out.println("잔   액 : " + this.accountBalance);
         System.out.println("-".repeat(20));
+    }
+
+    @Override
+    public String toString() {
+        return "-".repeat(20) +
+                "\n계좌번호 : " + accountNumber +
+                "\n고객이름 : " + customerName +
+                "\n잔   액 : " + accountBalance +
+                "\n";
     }
 }
