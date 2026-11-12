@@ -2,13 +2,14 @@ package week10;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
 public class WordManager {
     String userName;
-    List<Word> voc = new Vector<>();
+    List<Word> voc = new ArrayList<>();
     static Scanner scan = new Scanner(System.in);
 
     public WordManager(String userName) {
@@ -49,7 +50,7 @@ public class WordManager {
     }
 
     private void searchWord2() {
-        System.out.println("------- 단어 뜻 검색 -------");
+        System.out.println("------- 부분단어 검색 -------");
         System.out.print("검색할 단어 입력 : ");
         String word = scan.nextLine();
         for(Word w : voc) {
